@@ -1,4 +1,4 @@
-{% set version = '0.1.7' %}
+{% set version = "0.1.8" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/latexpdf_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/latexpdf/latexpdf_{{ version }}.tar.gz
-  sha256: d43d491b4dedab20ccee9b392707031d79a3c863f031698a9d23bc2953fe1058
+  sha256: 6fb9bc64df97ab22e6c1e7f286250ebfe06191f9d3b13bfe99090daa2a5937b7
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   noarch: generic
   rpaths:
@@ -41,13 +41,8 @@ test:
 about:
   home: https://CRAN.R-project.org/package=latexpdf
   license: GPL-3.0-only
-  summary: Converts table-like objects to stand-alone PDF or PNG. Can be used to embed tables
-    and arbitrary content in PDF or Word documents. Provides a low-level R interface
-    for creating 'LaTeX' code, e.g. command() and a high-level interface for creating
-    PDF documents, e.g. as.pdf.data.frame(). Extensive customization is available via
-    mid-level functions, e.g. as.tabular(). See also 'package?latexpdf'. Support for
-    PNG is experimental; see 'as.png.data.frame'. Adapted from 'metrumrg' <https://r-forge.r-project.org/R/?group_id=1215>.
-    Requires a compatible installation of 'pdflatex', e.g. <https://miktex.org/>.
+  summary: Converts table-like objects to stand-alone PDF or PNG. Can be used to embed tables and arbitrary content in PDF or Word documents. Provides a low-level R interface for creating 'LaTeX' code, e.g. command() and a high-level interface for creating PDF documents, e.g. as.pdf.data.frame(). Extensive customization
+    is available via mid-level functions, e.g. as.tabular(). See also 'package?latexpdf'. Support for PNG is experimental; see 'as.png.data.frame'. Adapted from 'metrumrg' <https://r-forge.r-project.org/R/?group_id=1215>. Requires a compatible installation of 'pdflatex', e.g. <https://miktex.org/>.
   license_family: GPL3
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
