@@ -1,6 +1,5 @@
 {% set version = "0.1.8" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-latexpdf
@@ -13,8 +12,7 @@ source:
   sha256: 6fb9bc64df97ab22e6c1e7f286250ebfe06191f9d3b13bfe99090daa2a5937b7
 
 build:
-  merge_build_host: true  # [win]
-  number: 0
+  number: 1
   noarch: generic
   rpaths:
     - lib/R/lib/
